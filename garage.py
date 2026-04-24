@@ -1,4 +1,7 @@
 def enter_garage(garage, car_id, entry_hour):
+    if not isinstance(entry_hour, (int)):
+       raise TypeError("entry_hour must be an integer")
+
     if len(garage['cars']) >= garage['capacity']:
         raise ValueError("Garage is full")
 
