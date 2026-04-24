@@ -23,5 +23,5 @@ def test_enter_garage():
 
 def test_enter_garage_value_error():
     with pytest.raises(ValueError):
-        garage1 = {"capacity": 10, "cars": {}}
+        garage1 = {"capacity": 0, "cars": {}}
         enter_garage(garage1, 'Bugatti17', 13)
