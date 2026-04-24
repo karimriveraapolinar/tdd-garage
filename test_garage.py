@@ -19,3 +19,9 @@ def test_enter_garage():
     garage1 = {"capacity": 10, "cars": {}}
     enter_garage(garage1, 'Bugatti17', 13)
     assert 'Bugatti17' in garage1['cars'].keys()
+
+
+def test_enter_garage_value_error():
+    with pytest.raises(ValueError):
+        garage1 = {"capacity": 10, "cars": {}}
+        enter_garage(garage1, 'Bugatti17', 13)
